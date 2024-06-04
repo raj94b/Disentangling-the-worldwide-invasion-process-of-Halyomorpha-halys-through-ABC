@@ -1,0 +1,19 @@
+//Inputfile for the program ABCsampler
+//-----------------------------------------------------------------------
+samplerType standard 
+//-----------------------------------------------------------------------
+estName multiple.est
+obsName all_pops.obs
+outName multiple_cl_ne_output
+separateOutputFiles 1
+launchBeforeSS /usr/bin/Rscript
+launchBeforeSSParam #--vanilla#script_city.r
+simDataName multiple_cl_ne-temp_1_1.arp
+nbSims 50000
+writeHeader 1
+simulationProgram /jarvis/scratch/usr/boscolo/softwares/fsc_linux64/fsc25221
+simInputName multiple_cl_ne.tpl
+simParam -i#multiple_cl_ne-temp.tpl#-n#1#-g
+sumStatProgram /jarvis/scratch/usr/boscolo/softwares/arlsumstat_linux/arlsumstat3522_64bit
+sumStatParam SIMDATANAME#SSFILENAME#0#1
+
