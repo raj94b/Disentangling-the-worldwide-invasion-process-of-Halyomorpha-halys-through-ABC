@@ -7,7 +7,7 @@ obsName all_pops.obs
 outName multiple_cl_ne_output
 separateOutputFiles 1
 launchBeforeSS /usr/bin/Rscript
-launchBeforeSSParam #--vanilla#script_city.r
+launchBeforeSSParam #--vanilla#compute_sites.r
 simDataName multiple_cl_ne-temp_1_1.arp
 nbSims 50000
 writeHeader 1
