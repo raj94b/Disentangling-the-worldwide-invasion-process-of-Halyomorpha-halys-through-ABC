@@ -11,9 +11,9 @@ launchBeforeSSParam #--vanilla#compute_sites.r
 simDataName multiple_ne_cl-temp_1_1.arp
 nbSims 10000
 writeHeader 1
-simulationProgram /jarvis/scratch/usr/boscolo/softwares/fsc_linux64/fsc25221
+simulationProgram fsc25221
 simInputName multiple_ne_cl.tpl
 simParam -i#multiple_ne_cl-temp.tpl#-n#1#-g
-sumStatProgram /jarvis/scratch/usr/boscolo/softwares/arlsumstat_linux/arlsumstat3522_64bit
+sumStatProgram arlsumstat3522_64bit
 sumStatParam SIMDATANAME#SSFILENAME#0#1
 
