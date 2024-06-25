@@ -108,6 +108,6 @@ sub<-pri[,c(posi)]
 siti_priv<-apply(sub,1,sum)
 siti<-matrix(nrow=1,ncol=length(c(siti_seg,siti_priv,fixed)))
 siti[1,]<-c(siti_seg,siti_priv,fixed)
-write.table(siti,"siti_step1.obs",col.names=c("ss1","ss2","ss3","sp1","sp2","sp3","sfo12","sfo13","sfo23"),row.names=F,quote=F)
+write.table(siti,"sites_step1.obs",col.names=c("ss1","ss2","ss3","sp1","sp2","sp3","sfo12","sfo13","sfo23"),row.names=F,quote=F)
 
 
