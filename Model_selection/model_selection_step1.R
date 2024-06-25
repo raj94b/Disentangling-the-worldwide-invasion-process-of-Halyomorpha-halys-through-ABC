@@ -17,9 +17,3 @@ obs<-read.table("halys_1.obs",h=T)
 obs<-obs[,f]
 
 b<-predict(object=a,obs=rbind(obs,obs),training=da,ntree=ntrees,paral=T,paral.predict=T,ncores=4,ncores.predict=4)
-
-
-b<-as.data.frame(b)
-write.table(b,"model_select_step1.txt", quote=F, row.names=F)
-
-
