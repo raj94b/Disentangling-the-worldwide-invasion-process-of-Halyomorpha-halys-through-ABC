@@ -1,0 +1,19 @@
+//Inputfile for the program ABCsampler
+//-----------------------------------------------------------------------
+samplerType standard 
+//-----------------------------------------------------------------------
+estName eu_us_mi.est
+obsName eu_us.obs
+outName eu_us_mi_output
+separateOutputFiles 1
+launchBeforeSS /usr/bin/Rscript
+launchBeforeSSParam #--vanilla#compute_sites.r
+simDataName eu_us_mi-temp_1_1.arp
+nbSims 10000
+writeHeader 1
+simulationProgram fsc252
+simInputName eu_us_mi.tpl
+simParam -i#eu_us_mi-temp.tpl#-n#1#-g
+sumStatProgram arlsumstat3522_64bit
+sumStatParam SIMDATANAME#SSFILENAME#0#1
+
