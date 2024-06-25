@@ -11,8 +11,6 @@ f<-apply(s,2,var)!=0
 da<-data.frame(i,s[,f])
 
 a<-abcrf(i~.,data=da,lda=T,ntree=ntrees,paral=T,ncores=8)
-plot(a, training=da, obs=obs, pdf=TRUE)
-
 obs<-read.table("halys_1.obs",h=T)
 obs<-obs[,f]
 
