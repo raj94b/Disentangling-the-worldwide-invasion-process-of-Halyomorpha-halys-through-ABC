@@ -1,0 +1,24 @@
+// Priors and rules file
+// *********************
+
+[PARAMETERS]
+//#isInt? #name	#dist.#min	#max	
+//all N are in number of diploid individuals
+0	LOG_Nc1	unif	4	6	hide
+0	LOG_Nc2	unif	4	6	hide
+0	LOG_Nc3	unif	4	6	hide
+1	T1	unif	600001	2000000	output
+1	T2	unif	40000	600000	output
+1	T3	unif	60	200	output
+0	LOG_mj	unif	2	4	hide
+0	LOG_mc	unif	2	4	hide
+[RULES]
+
+T2 < T1 
+
+[COMPLEX PARAMETERS]
+1	Nc1 = pow10( LOG_Nc1 )	output
+1	Nc2 = pow10( LOG_Nc2 )	output
+1	Nc3 = pow10( LOG_Nc3 )	output
+0	mj = pow10( 1-LOG_mj )	output
+0	mc = pow10( 1-LOG_mc )	output
