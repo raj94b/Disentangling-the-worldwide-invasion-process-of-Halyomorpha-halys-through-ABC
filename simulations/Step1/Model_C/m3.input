@@ -1,0 +1,18 @@
+//Inputfile for the program ABCsampler
+//-----------------------------------------------------------------------
+samplerType standard 
+//-----------------------------------------------------------------------
+estName ./m3.est
+obsName ./halys.obs
+outName m3_output
+separateOutputFiles 1
+launchBeforeSS /usr/bin/Rscript
+launchBeforeSSParam #--vanilla#compute_sites.r
+simDataName m3-temp_1_1.arp
+nbSims 25000
+writeHeader 1
+simulationProgram fsc252
+simInputName m3.tpl
+simParam -i#m3-temp.tpl#-n#1#-g
+sumStatProgram arlsumstat3522_64bit
+sumStatParam SIMDATANAME#SSFILENAME#0#1
